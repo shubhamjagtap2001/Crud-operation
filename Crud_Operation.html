@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="D:\Crud-operation_JS\Crud_opration2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<title>Employe</title>
+    </head>
+    <body>
+        <div class="header">
+            <h5>Employe</h5>
+        </div>
+        <div class="upper-btn-box"> 
+            <div class="left-box">
+                <button  id="Add-Btn" style=" padding: 5px; background-color: skyblue; cursor: pointer;"><i class="fa fa-plus"></i> &nbsp; Add Employe</button>
+                <button  id="del-all-btn" style=" padding: 5px; background-color: #33B5E6; margin-left: 10px; cursor: pointer;"><i class="fa fa-eraser"></i> &nbsp; Clear All Data</button>
+                <input type="checkbox" name=""  id="del-all-box">
+            </div>
+ 
+            <div class="right-box">
+             <i class="fa fa-search"></i> 
+             <input type="text" id="empid" placeholder=" Enter Empolye Id ">  
+             <button style= "padding: 5px; background-color:#EE534f; cursor: pointer;">Search</button>
+            </div>
+        </div>
+            <div class="table-box">
+               <table>
+                <tr>
+                    <th>Sr.no</th>
+                    <th>Profile</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Last Name</th>
+                    <th>E-mail</th>
+                    <th>Office Code</th>
+                    <th>Job title</th>
+                    <th>Action</th>
+                </tr>
+                <tbody id="table-data">
+
+                </tbody>
+               </table>
+            </div>
+        <div class="model">
+
+                <i class="fa-solid fa-x" style=" 
+                margin-left: 99%;
+                position: absolute;
+                top: -35px;"></i>
+          
+            <div class="left-model">
+                <div class="img-box">
+                   <img src="C:\Users\HP\Downloads\avtar.png" id="Profile-pic" width="150" height="150" alt="">
+                   <i class="fa-solid fa-plus"></i>
+                   <input type="file" id="upload-pic">
+                </div>
+            </div>
+            <div class="right-model" style="margin-top: 23px;">  
+                <form id="register-form">
+                <div class="input-box">
+
+                        <label for="fname">Id:</label>
+                        <input type="text" required id="fname" name="fname" style="margin-left: 91px"><br></br>
+                        <label for="lname">Name:</label>
+                        <input type="text" required id="Aname" name="Aname" style="margin-left: 50px;"><br><br>
+                        <label for="lname">Last Name:</label>
+                        <input type="text" required id="lname" name="lname"><br><br>
+                        <label for="lname">E-mail:</label>
+                        <input type="email" required id="Ename" name="email" style="margin-left: 44PX;"><br><br>
+                        <label for="lname">Office Code:</label>
+                        <input type="text" required id="Officename" name="Oname" style="margin-left: -13px;"><br><br>
+                        <label for="lname">job Title:</label>
+                        <input type="text" required id="jname" name="jname" style="margin-left: 25px;"><br><br>
+                        
+                </div>
+           
+                <div class="input-box">
+                    <button  id="register-Btn" style="margin-left: 135px; margin-top: 20px; width: 20%;" type="submit">Register</button>
+                    <button id="update-btn"  style="width: 20%; background-color: #EE534f;" >Update</button>
+                </div>
+            </form>
+            </div>
+        </div>
+      
+       <script src="D:\Crud-operation_JS\Crud_operation3.js"></script>
+    </body>
+
+</html>

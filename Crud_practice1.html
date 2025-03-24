@@ -1,0 +1,102 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="D:\Crud-operation_JS\Crud_practice1.css"> 
+       <title></title> 
+    </head>
+   
+   <body>
+    <div class="right-model" style="margin-top: 23px;">  
+        <form id="Submit-form">
+        <div class="input-box">
+            <div>
+                <label for="Name">Name:</label>
+                <input type="text"  id="Nname" name="Nname" style=" width: 340px; height: 40px;"><br><br>
+            </div>
+            <div>
+                <label for="Aname">Age:</label>
+                <input type="text"  id="Aname" name="Aname" style=" width: 340px; height: 40px; margin-left: 17px;"><br><br>
+            </div>
+            <div>
+                <label for="lname">E-mail:</label>
+                <input type="email"  id="Ename" name="email" style=" width: 340px; height: 40px;"><br><br>
+            </div>
+            <div>
+                <label for="Mname">Mo No:</label>
+                <input type="text"  id="Mname" name="Mname" style=" width: 340px; height: 40px;"><br><br>
+            </div>
+        </div>
+   
+        <div class="input-box" >
+            <button  id="register-Btn" onclick="savedata()" type="button" style="
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            margin-left: 74px;">Submit</button>
+            <button id="update-btn" type="reset" style="
+            width: 100px;
+            height: 40px;
+            font-size: 19px;
+            margin-left: 23px;" >Reset</button>
+            
+        </div>
+    </form>
+    </div>
+</div>
+<div class="table-box">
+    <table style="width: 100%;"  id="table">
+        <tbody id="tbody">
+            
+                <tr>
+         <th>Name</th>
+         <th>Age</th>
+         <th>E-mail</th>
+         <th>Mo.No</th>
+         <th>Action</th>
+                </tr>
+   
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+         </tr>
+         
+    </tbody>
+     </table>
+   </body>
+   <script> 
+    let data = []
+  
+    function savedata(){
+        
+        let Name =document.getElementById("Nname").value;
+        let Aname = document.getElementById("Aname") .value;
+        let Ename = document.getElementById("Ename").value;
+        let Mname = document.getElementById("Mname").value;
+
+        let obj = {name:Name,age:Aname,email:Ename, Mobile:Mname};
+
+    data.push(obj);
+    console.log(data);
+
+
+    data.map(item=>{
+        console.log(item);
+        const row = tbody.insertRow();
+        const cellName = row.insertCell(0);
+        const cellAge = row.insertCell(1);
+        const cellEmail = row.insertCell(2);
+        const cellMobile = row.insertCell(3);
+        
+        cellName.textContent = item.name;
+        cellAge.textContent = item.age;
+        cellEmail.textContent = item.email;
+        cellMobile.textContent = item.mobile
+   })
+       
+}
+    
+
+</script>
+</html>

@@ -1,0 +1,16 @@
+ .right-model #Submit-form .input-box{
+    text-align: center;
+    font-size: x-large;
+ }
+ .table-box table tr th{
+    border-right: 1px solid #ccc;
+    padding: 30px 0px 0px;
+    /* font-family: verdana; */
+    font-size: x-large ;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+
+
+
